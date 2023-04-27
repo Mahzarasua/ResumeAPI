@@ -16,8 +16,7 @@
 *.tar.gz
 *.rar
 
-*/.idea/*
+.idea/
 *.iws
 *.iml
 *.ipr
-!/.idea/*.xml
