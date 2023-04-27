@@ -1,0 +1,65 @@
+#These properties should be taken from Config Server, in order to do this, EurekaServer and ConfigServer must be started
+#prior to starting this App, properties will be listed here to be used locally in case you only want to run this App alone
+logging:
+  level:
+    com:
+      izars: DEBUG
+      mahzarasua: DEBUG
+    org:
+      springframework: INFO
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+server:
+  error:
+    include-message: always
+spring:
+  output:
+    ansi:
+      enabled: always
+  application:
+    name: resume-api
+management:
+  health:
+    db:
+      enabled: true
+    diskspace:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /admin
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: false
+  info:
+    env:
+      enabled: true
+info:
+  app:
+    version: "${project.version}"
+    name: "${spring.application.name}"
+    description: "${project.description}"
+    license:
+      name: "MIT License"
+      url: "https://opensource.org/licenses/MIT"
+    contact:
+      name: "Miguel Hernandez"
+      url: "https://github.com/mahzarasua"
+      email: "mahzarasua@hotmail.com"
+eureka:
+  instance:
+    statusPageUrlPath: ${management.endpoints.web.base-path}/health
+    healthCheckUrlPath: ${management.endpoints.web.base-path}/health
+    preferIpAddress: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    healthcheck:
+      enabled: true

@@ -1,0 +1,7 @@
+springdoc:
+  api-docs:
+    path: /openapi
+  swagger-ui:
+    path: /swagger-ui-openapi.html
+    default-model-expand-depth: -1
+    defaultModelsExpandDepth: -1

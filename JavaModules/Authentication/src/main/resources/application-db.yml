@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+        default_schema: public
+        ddl-auto: none
+        show-sql: true
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    platform: postgresql
+    url: jdbc:postgresql://localhost:5432/resume-api
+    username: '{cipher}481b6e5afa2d95351a91d6d7a92d24991002a28c201fd14b6eba03741ec5379d'
+    password: '{cipher}c02c9dff9d82e1e1882ec0a63d68bff482abcaffa3eacc25a7b718bf6af6a7e7'

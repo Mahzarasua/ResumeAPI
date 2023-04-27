@@ -1,0 +1,14 @@
+#These properties should be taken from Config Server, in order to do this, EurekaServer and ConfigServer must be started
+#prior to starting this App, properties will be listed here to be used locally in case you only want to run this App alone
+spring:
+  profiles:
+    include: common, db, jwt, swagger
+server:
+  port: 8084
+eureka:
+  instance:
+    appname: "education-api"
+    statusPageUrlPath: ${management.endpoints.web.base-path}/info
+    healthCheckUrlPath: ${management.endpoints.web.base-path}/health
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 60

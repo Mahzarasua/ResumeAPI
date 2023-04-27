@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: common-properties, resume-api
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+      enabled: true
+      server:
+        encrypt:
+          enabled: true
+          plainTextEncrypt: true
+encrypt:
+  key: Rg#k7JyV92'7

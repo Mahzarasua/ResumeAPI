@@ -1,0 +1,2 @@
+jwt:
+  secret: '{cipher}cdbbf31873716ca9cbf934ffc9932ca8e20b3ee0419d2b85422cccdb50b68109'
